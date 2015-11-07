@@ -1,7 +1,10 @@
-// Reactをインポート。package.jsonにReactを定義しておき、npm installをすることでインポート可能。
+// Reactをインポート。
 import React from 'react';
 // ReactのDOMプラグインをインポート。
 import ReactDOM from 'react-dom';
+
+// オブジェクトのマージ用途のみ
+import _ from 'lodash';
 
 // React.Componentを継承する形でコンポーネントを定義する。
 class MenuComponent extends React.Component {
@@ -51,7 +54,6 @@ class MenuComponent extends React.Component {
         textAlign : 'center',
         backgroundColor : '#000',
         borderRadius: '6px',
-        borderRadius: '6px',
         boxShadow: ' 6px 9px 10px -8px #333',
         userSelect: 'none',
         MozUserSelect: 'none',
@@ -65,46 +67,37 @@ class MenuComponent extends React.Component {
 
     // 各ボタンのスタイルをまとめたオブジェクト
     this.btnStyles =  {
-
-      /*
-        Object.assignでそれぞれのスタイルオブジェクトをマージする。
-        styleのキー名を動的に定義する。
-      */
-
       //btnStyleParentEnterActive1
-      [OBJ_NAME + objIdx++] : Object.assign(
+      [OBJ_NAME + objIdx++] : _.assign(
         {},
         animationBase,
         styleBase,
         {
           backgroundColor: '#009688'
-        }
-      ),
+        }),
 
       //btnStyleParentEnterActive2
-       [OBJ_NAME + objIdx++] : Object.assign(
+       [OBJ_NAME + objIdx++] : _.assign(
         {},
         animationBase,
         modifier1,
         styleBase,
         {
           backgroundColor: '#1A237E'
-        }
-      ),
+        }),
 
       //btnStyleParentEnterActive3
-       [OBJ_NAME + objIdx++] : Object.assign(
+       [OBJ_NAME + objIdx++] : _.assign(
         {},
         animationBase,
         modifier2,
         styleBase,
         {
           backgroundColor : '#D50000'
-        }
-      ),
+        }),
 
       //btnStyleParentEnterActive4
-      [OBJ_NAME + objIdx++] : Object.assign(
+      [OBJ_NAME + objIdx++] : _.assign(
         {},
         animationBase,
         modifier3,
