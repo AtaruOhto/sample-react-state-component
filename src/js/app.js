@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // オブジェクトのマージ用途のみ
-import _ from 'lodash';
+import assign from 'object-assign';
 
 // React.Componentを継承する形でコンポーネントを定義する。
 class MenuComponent extends React.Component {
@@ -68,7 +68,7 @@ class MenuComponent extends React.Component {
     // 各ボタンのスタイルをまとめたオブジェクト
     this.btnStyles =  {
       //btnStyleParentEnterActive1
-      [OBJ_NAME + objIdx++] : _.assign(
+      [OBJ_NAME + objIdx++] : assign(
         {},
         animationBase,
         styleBase,
@@ -77,7 +77,7 @@ class MenuComponent extends React.Component {
         }),
 
       //btnStyleParentEnterActive2
-       [OBJ_NAME + objIdx++] : _.assign(
+       [OBJ_NAME + objIdx++] : assign(
         {},
         animationBase,
         modifier1,
@@ -87,7 +87,7 @@ class MenuComponent extends React.Component {
         }),
 
       //btnStyleParentEnterActive3
-       [OBJ_NAME + objIdx++] : _.assign(
+       [OBJ_NAME + objIdx++] : assign(
         {},
         animationBase,
         modifier2,
@@ -97,7 +97,7 @@ class MenuComponent extends React.Component {
         }),
 
       //btnStyleParentEnterActive4
-      [OBJ_NAME + objIdx++] : _.assign(
+      [OBJ_NAME + objIdx++] : assign(
         {},
         animationBase,
         modifier3,

@@ -9,9 +9,9 @@
   "author": "middle",
   "license": "MIT",
   "dependencies": {
+    "object-assign": "^4.0.1",
     "react": "0.14.2",
-    "react-dom": "0.14.2",
-    "lodash": "^3.10.1"
+    "react-dom": "0.14.2"
   },
   "devDependencies": {
     "babel-core": "^5.8.22",
